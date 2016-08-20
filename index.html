@@ -1,8 +1,102 @@
-<html>
-<body>
-<h1>
-Hello World!!!
-</h1>
-<body>
-<html>
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>猫耳VR</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    
+    <link rel="stylesheet" href="css/reset.css">
 
+    <link rel='stylesheet prefetch' href='css/font-awesome.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/prefixfree.min.js"></script>
+    <style type="text/css">
+#content .test1{
+  width:148px;
+  height:148px;
+  display: inline-block;
+  background: url('asset/android.png');
+}
+
+#content .test2{
+  width:148px;
+  height:148px;
+    display: inline-block;
+  background: url('asset/iOS2.png');
+}
+
+#content .test3{
+  width:148px;
+  height:148px;
+    float:left;
+  background: url('asset/android.png');
+}
+    </style>
+    
+  </head>
+
+  <body>
+
+    <!-- This pen isn't a fan of small view heights, check it out in  fullpage view for optimal viewing	 -->
+    <div class="x-mark">
+  		<div class="container">
+  			<div class="left"></div>
+  			<div class="right"></div>
+  		</div>
+  	</div>
+  	<div class="intro-container">
+      
+  		<h2 class="fancy-text">猫耳VR</h2>
+  		<h1>让我们从虚拟现实中探索<br>更真实的体验</h1>
+
+  		<div class="button shift-camera-button">
+  			<div class="border">
+  				<div class="left-plane"></div>
+  				<div class="right-plane"></div>
+  			</div>	
+  			<div class="text">立刻开始</div>
+  		</div>
+  	</div>
+  	<div class="sky-container">
+  		<div class="text-right sky-container__left" style="width: 100%;text-align:center;">
+      <div style="width:48px;height:48px;background: url('asset/logo.png');background-size: contain;margin: 0 auto;margin-top: 20px;"></div>
+  			<h2 class="portfolio">
+  				猫耳VR
+  			</h2>
+<!--   			<h2 class="resurrection" style="margin-bottom:20px;">
+  				即将来临...	
+  			</h2> -->
+        <div id="video" class="player" style="width:100%;max-width:600px;height:300px;margin-top:30px;margin: 0 auto;overflow: hidden;"></div>
+        <p  style="padding-top:20px;">联系邮箱：marvrplayer@126.com   联系QQ：2693010018</p>
+        <div style="width:148px;height:148px;background: url('asset/android.png');background-size: contain;margin: 0 auto;margin-top: 20px;"></div>
+        <div style="width:148px;height:148px;background: url('asset/iOS2.png');background-size: contain;margin: 0 auto;margin-top: 20px;"></div>
+        <div style="width:148px;height:148px;background: url('asset/unity.png');background-size: contain;margin: 0 auto;margin-top: 20px;"></div>
+        <!-- <p style="color:rgba(248, 232, 232, 0.44);text-align:center;">(扫码下载)</p> -->
+  		</div>
+  	</div>
+
+    <script src='js/jquery.min.js'></script>
+    <script src='js/TweenMax.min.js'></script>
+    <script src='js/three.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+    <script src="js/panolens.min.js"></script>
+
+    <script>
+
+      var panorama, viewer;
+
+      panorama = new PANOLENS.VideoPanorama( 'asset/1941-battle-low.mp4' );
+
+      viewer = new PANOLENS.Viewer({container: document.getElementById("video")});
+      viewer.add( panorama );
+
+    </script>
+
+
+  </body>
+</html>

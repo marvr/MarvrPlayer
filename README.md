@@ -1,2 +1,0 @@
-# MarvrPlayer
-MarvrPlayer Info WebSite
